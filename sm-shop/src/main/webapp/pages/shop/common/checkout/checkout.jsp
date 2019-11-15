@@ -195,7 +195,12 @@ function setPaymentModule(module) {
 	else if(module.indexOf('braintree') >= 0) {
 			$('#paymentMethodType').val('CREDITCARD');
 			console.log('TYPE ' + $('#paymentMethodType').val());
-	} else {
+	}
+	else if(module.indexOf('adyen') >= 0) {
+            $('#paymentMethodType').val('CREDITCARD');
+            console.log('TYPE ' + $('#paymentMethodType').val());
+    }
+	 else {
 		pType = pType.toUpperCase();
 		console.log('Other type - ' + pType);
 		$('#paymentMethodType').val(pType);
@@ -1362,7 +1367,7 @@ $(document).ready(function() {
 													    			
 													    			<!-- exception for stripe which has it's own page -->
 													    			<c:choose>
-													    				<c:when test="${(paymentMethod.paymentMethodCode=='stripe') or (paymentMethod.paymentMethodCode=='braintree')}">
+													    				<c:when test="${(paymentMethod.paymentMethodCode=='stripe') or (paymentMethod.paymentMethodCode=='braintree')  or (paymentMethod.paymentMethodCode=='adyen')}">
 													    					<c:set var="pageName" value="${fn:toLowerCase(paymentMethod.paymentMethodCode)}" />
 													    				</c:when>
 													    				<c:otherwise>

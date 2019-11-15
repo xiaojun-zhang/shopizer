@@ -48,6 +48,7 @@
     			<beans:entry key="moneyorder" value-ref="moneyorder"/>
     			<beans:entry key="stripe" value-ref="stripe"/>
     			<beans:entry key="braintree" value-ref="braintree"/>
+				<beans:entry key="adyen" value-ref="adyen"/>
     </util:map>
 
 	<!-- Shipping -->
@@ -83,6 +84,8 @@
 		class="com.salesmanager.core.business.modules.integration.payment.impl.StripePayment"/>
 	<beans:bean id="braintree"
 		class="com.salesmanager.core.business.modules.integration.payment.impl.BraintreePayment"/>
+	<beans:bean id="adyen"
+				class="com.salesmanager.core.business.modules.integration.payment.impl.AdyenPayment"/>
 
 
 

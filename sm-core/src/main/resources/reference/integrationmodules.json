@@ -104,6 +104,17 @@
 		"image":"braintree.jpg",
 		"configuration":[{"env":"TEST","scheme":"https","host":"NOTREQUIRED","port":"NOTREQUIRED","uri":"NOTREQUIRED"},{"env":"PROD","scheme":"https","host":"NOTREQUIRED","port":"NOTREQUIRED","uri":"NOTREQUIRED"}]
 
+	},
+
+	{
+		"module": "PAYMENT",e
+		"code": "adyen",
+		"type":"creditcard",
+		"version":"",
+		"regions": ["US","CA"],
+		"image":"adyen.png",
+		"configuration":[{"env":"TEST","scheme":"https","host":"NOTREQUIRED","port":"NOTREQUIRED","uri":"NOTREQUIRED"},{"env":"PROD","scheme":"https","host":"NOTREQUIRED","port":"NOTREQUIRED","uri":"NOTREQUIRED"}]
+
 	}
 
 ] 
